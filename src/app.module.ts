@@ -6,7 +6,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
-    ConfigModule.forRoot({}),
+    ConfigModule.forRoot({ isGlobal: true }),
     AuthModule,
     UserModule,
     BookmarkModule,
