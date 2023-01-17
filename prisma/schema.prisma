@@ -18,8 +18,7 @@ model User {
   hash      String
   firstName String?
   lastName  String?
-
-  bookmarks  Bookmark[]
+  bookmarks Bookmark[]
 
   @@map("users")
 }
@@ -31,9 +30,8 @@ model Bookmark {
   title       String
   description String?
   link        String
-
-  userId Int
-  user   User @relation(fields: [userId], references: [id])
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id])
 
   @@map("bookmarks")
 }
